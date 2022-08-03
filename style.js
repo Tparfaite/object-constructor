@@ -49,5 +49,38 @@ console.log(name);
 const peter=joyce.friends[3];
 console.log(peter);
 peter.addFriends("tom","60","male","engineer",[]);
+peter.addFriends("claire","25","female","dentist",[]);
 console.log(peter.friends[0]);
 
+const claire=peter.friends[1];
+claire.addFriends("Sam","45","male","Artist",[]);
+
+
+joyce.city="kigali";
+Person.prototype.city="musanze";
+console.log(joyce.city);
+console.log(claire.city);
+
+
+
+const johnAddress={
+    name:"john",
+    age:20,
+    city:"musanze"
+    
+
+}
+
+
+const peterAddress={
+    name:"peter",
+    age:30,
+    city:"kigali",
+    
+}
+
+peterAddress.profession="IT"
+
+johnAddress.prototype=peterAddress;
+
+console.log(johnAddress.prototype.profession);
